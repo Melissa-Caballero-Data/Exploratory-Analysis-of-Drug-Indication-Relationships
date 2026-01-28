@@ -1,39 +1,40 @@
-# 🧪 Pharmacovigilance: Adverse Drug Events Analysis
+# 🧪 Drug–Indication Relationship Analysis
 
 ## Context
-Pharmacovigilance focuses on monitoring the safety of medications after they are approved and used in real-world settings.  
-Adverse event reporting systems help identify potential safety signals and patterns that may require further investigation.
+Understanding the relationship between drugs and their approved or reported clinical indications is essential in healthcare and pharmaceutical analytics.  
+Standardized vocabularies such as RxNorm, MONDO, and UMLS enable consistent integration and analysis of medical data across systems.
 
 ## Objective
-To perform an exploratory analysis of adverse drug event reports in order to describe reporting patterns by drug, patient demographics, and type of adverse event.
+To perform an exploratory analysis of drug–indication relationships using standardized clinical vocabularies, focusing on the structure, frequency, and diversity of indications associated with different drugs.
 
-This project is descriptive and does not aim to establish causality.
+This project is descriptive and does not aim to assess efficacy or safety.
 
 ## Data
-Public adverse event reports from the FDA Adverse Event Reporting System (FAERS).  
-The dataset contains spontaneous reports submitted by healthcare professionals and consumers.
+Publicly available drug–indication data including:
+- Drug names and synonyms
+- RxNorm identifiers (RxCUI)
+- Clinical indications mapped to MONDO and UMLS ontologies
 
 Key variables include:
-- Drug name
-- Adverse event
-- Patient age and sex
-- Report year
+- Drug labels
+- Indication labels
+- Ontology identifiers
 
 ## Methodology
-- Data cleaning and standardization
+- Data cleaning and normalization of drug and indication labels
 - Exploratory data analysis (EDA)
-- Frequency analysis by drug and adverse event
-- Stratification by demographic variables
+- Frequency analysis of indications per drug
+- Identification of drugs with broad vs. narrow indication profiles
 
 ## Key findings
-- Certain adverse events are more frequently reported for specific drugs
-- Reporting frequency varies across age groups and sex
-- Most reports are concentrated in a small number of event categories
+- Some drugs are associated with a wide range of clinical indications
+- Indications are unevenly distributed across drugs
+- Ontology-based identifiers enable structured analysis of medical concepts
 
 ## Limitations
-- FAERS data is subject to reporting bias and underreporting
-- The presence of a report does not imply causality
-- Results should not be interpreted as estimates of risk
+- The dataset does not include treatment outcomes or adverse events
+- Relationships are descriptive and may not reflect clinical practice or approval status
+- No causal or effectiveness conclusions can be drawn
 
 ## Tools
 Python, Pandas, Matplotlib
