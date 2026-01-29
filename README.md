@@ -32,6 +32,7 @@ The dataset contains drug–indication associations derived from FAERS reports, 
 - Indications are derived from FAERS reports and do not represent treatment effectiveness or clinical outcomes
 - Missing indication values reflect incomplete coverage rather than absence of clinical use
 - Results are descriptive and should not be used for clinical or regulatory decision-making
+- While UMLS and MONDO identifiers are included in the dataset, this project focuses on descriptive drug–indication patterns. Ontology-level analyses were considered out of scope and are better suited for downstream integration or semantic modeling tasks.
 
 ## Tools
 Python, Pandas, Matplotlib
