@@ -1,43 +1,40 @@
-# 🧪 Drug–Indication Relationship Analysis
+# 🧪 Drug–Indication Association Analysis (FAERS-derived data)
 
 ## Context
-Understanding the relationship between drugs and their approved or reported clinical indications is essential in healthcare and pharmaceutical analytics.  
-Standardized vocabularies such as RxNorm, MONDO, and UMLS enable consistent integration and analysis of medical data across systems.
+Understanding drug–indication associations is an important component of healthcare and pharmaceutical data analysis.  
+This project explores drug–indication data extracted from the FDA Adverse Event Reporting System (FAERS) and standardized using clinical ontologies such as RxNorm, UMLS, and MONDO.
 
 ## Objective
-To perform an exploratory analysis of drug–indication relationships using standardized clinical vocabularies, focusing on the structure, frequency, and diversity of indications associated with different drugs.
+To perform a descriptive and exploratory analysis of drug–indication associations, focusing on data structure, coverage, and indication diversity across drugs.
 
-This project is descriptive and does not aim to assess efficacy or safety.
+This analysis does not aim to assess clinical effectiveness, safety, or causality.
 
 ## Data
-Publicly available drug–indication data including:
-- Drug names and synonyms
-- RxNorm identifiers (RxCUI)
-- Clinical indications mapped to MONDO and UMLS ontologies
-
-Key variables include:
-- Drug labels
-- Indication labels
-- Ontology identifiers
+The dataset contains drug–indication associations derived from FAERS reports, including:
+- Drug labels and synonyms
+- RxNorm Clinical Unique Identifiers (RxCUI)
+- Clinical indications mapped to UMLS and MONDO ontologies
 
 ## Methodology
-- Data cleaning and normalization of drug and indication labels
+- Data cleaning and parsing of multi-label drug and indication fields
+- Explicit handling of missing indication data
 - Exploratory data analysis (EDA)
-- Frequency analysis of indications per drug
-- Identification of drugs with broad vs. narrow indication profiles
+- Analysis of indication distribution and drug indication profiles
+- Visualization of key patterns
 
 ## Key findings
-- Some drugs are associated with a wide range of clinical indications
-- Indications are unevenly distributed across drugs
-- Ontology-based identifiers enable structured analysis of medical concepts
+- A substantial proportion of drugs lack recorded indication information, reflecting dataset coverage limitations
+- Most drugs with available data are associated with a small number of indications
+- A limited subset of drugs shows broader indication profiles
+- Drug labels required standardization to improve interpretability and visualization clarity
 
 ## Limitations
-- The dataset does not include treatment outcomes or adverse events
-- Relationships are descriptive and may not reflect clinical practice or approval status
-- No causal or effectiveness conclusions can be drawn
+- Indications are derived from FAERS reports and do not represent treatment effectiveness or clinical outcomes
+- Missing indication values reflect incomplete coverage rather than absence of clinical use
+- Results are descriptive and should not be used for clinical or regulatory decision-making
 
 ## Tools
 Python, Pandas, Matplotlib
 
 ## Disclaimer
-This project uses publicly available data and is intended for educational purposes only.
+This project uses publicly available data and is intended for educational and portfolio purposes only.
