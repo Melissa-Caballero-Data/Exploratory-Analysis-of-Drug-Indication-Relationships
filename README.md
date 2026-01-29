@@ -38,3 +38,8 @@ Python, Pandas, Matplotlib
 
 ## Disclaimer
 This project uses publicly available data and is intended for educational and portfolio purposes only.
+
+## Repository structure
+- `notebooks/`: Jupyter notebook with the exploratory analysis
+- `data/`: Dataset used in the analysis
+- `results/figures/`: Generated figures
